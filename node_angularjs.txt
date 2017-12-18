@@ -1,0 +1,11 @@
+#Instalación de Angular Dependecies
+sudo apt-get update
+sudo apt-get install build-essential libssl-dev
+curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
+source ~/.profile ~/.bashrc
+nvm install v9.1.0
+npm install -g yo grunt-cli bower
+npm install -g generator-angular
+npm install -g generator-karma
+nvm alias default v9.1.0
+nvm use v9.1.0

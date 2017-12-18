@@ -1,0 +1,66 @@
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties bffi-dev
+git clone git://github.com/sstephenson/rbenv.git .rbenv
+cd ~/.rbenv && src/configure && make -C src
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc 
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+~/.rbenv/bin/rbenv init
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv build
+rebenv install 2.4.1
+rbenv install 2.4.1
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+heroku login
+clear
+gem install rails --no-ri --no-rdoc
+sudo gem install rails --no-ri --no-rdoc
+rbenv global 2.4.1
+sudo apt-get update
+rails new web_services_cross_domain -d mysql
+gem install mysql2 -v '0.4.9'
+sudo apt-get install libmysqlclient-dev
+gem install mysql2 -v '0.4.9'  
+rbenv install 2.2.2
+sudo gem install bundler --pre
+rbenv global 2.4.1
+rails s 0.0.0.0:3000
+rbenv rehash
+bundle
+env | grep PATH
+history > history.txt
+
+User: root
+Pass: 4dm1n
+sudo apt-get update
+sudo apt-get install mysql-server
+
+sudo nano /etc/mysql/my.cnf
+bind-address            = 0.0.0.0
+
+and comment 
+#skip-external-locking
+
+
+mysql -uroot -p4dm1n
+
+ver los usuarios
+
+select host, user, password from mysql.user;
+
+CREATE USER 'remoteuser'@'%' IDENTIFIED BY 'r3m0t3us3r';
+create database web_services_cross_domain_development;
+GRANT ALL ON web_services_cross_domain_development.*  TO 'remoteuser'@'%';
+FLUSH PRIVILEGES;
+
+create database surbtc_trader_client_development;
+GRANT ALL ON surbtc_trader_client_development.*  TO 'remoteuser'@'%'; 
+FLUSH PRIVILEGES;
+
+Revisar que todo quedo perfecto:
+
+select db,host,user from mysql.db;
+
+Esto cuando da errores de compilación
+
+
+sudo apt-get install nodejs
